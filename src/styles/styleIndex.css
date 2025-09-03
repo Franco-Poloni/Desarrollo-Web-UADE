@@ -85,7 +85,15 @@ footer a{
     text-decoration: none;
     color: inherit;
 }
-
+.bx.bxl-facebook{
+    font-size: 25px;
+}
+.bx.bxl-instagram{
+    font-size: 25px;
+}
+.bx.bxl-twitter{
+    font-size: 25px;
+}
 footer ul{
     padding: 0;
 }
@@ -125,12 +133,12 @@ footer h3{
     margin: 0;
 }
 .productos {
-    overflow: hidden; /* VER ESTO */
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .card {
-    float: left;       /* VER ESTO */
     width: 22%;       
     margin-right: 2%;
     text-align: center;
@@ -142,4 +150,8 @@ footer h3{
     height: auto;
 }
 
+.card p{
+    font-family: "Times New Roman", Times, serif;
+    color: #545454;
+}
 
