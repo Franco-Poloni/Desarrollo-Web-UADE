@@ -66,7 +66,7 @@ footer{
     background-color: #de8016;
     color: #ffffff;
     padding: 40px;
-    position: relative; /* ya no absolute */
+    position: relative; /* VER ESTO */
     bottom: auto;
 }
 
@@ -125,12 +125,12 @@ footer h3{
     margin: 0;
 }
 .productos {
-    overflow: hidden; /* para que el contenedor englobe los floats */
+    overflow: hidden; /* VER ESTO */
     margin-left: 20px;
 }
 
 .card {
-    float: left;       /* hace que las tarjetas se alineen horizontalmente */
+    float: left;       /* VER ESTO */
     width: 22%;       
     margin-right: 2%;
     text-align: center;
