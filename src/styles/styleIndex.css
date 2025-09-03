@@ -132,6 +132,21 @@ footer h3{
     font-style: italic;
     margin: 0;
 }
+
+.nav-container{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-member{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
 .productos {
     display: flex;
     justify-content: center;
