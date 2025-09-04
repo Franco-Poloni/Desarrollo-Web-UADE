@@ -182,6 +182,7 @@ footer h3{
 .card img {
     width: 70%;
     height: auto;
+    border: 1px solid #d1d1d1;
 }
 
 .card p{
