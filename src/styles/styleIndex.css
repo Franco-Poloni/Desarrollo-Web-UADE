@@ -27,6 +27,10 @@ main {
     padding-bottom: 60px; 
 }
 
+img{
+    vertical-align: bottom;
+}
+
 
 nav{
 
@@ -89,13 +93,13 @@ footer a{
     color: inherit;
 }
 .bx.bxl-facebook{
-    font-size: 25px;
+    font-size: 30px;
 }
 .bx.bxl-instagram{
-    font-size: 25px;
+    font-size: 30px;
 }
 .bx.bxl-twitter{
-    font-size: 25px;
+    font-size: 30px;
 }
 footer ul{
     padding: 0;
@@ -152,14 +156,13 @@ footer h3{
 .footer-container{
     display: inline-flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
 .footer-member{
     display: flex;
     gap: 80px;
-    align-items: center;
+    align-items: start;
 }
 
 
