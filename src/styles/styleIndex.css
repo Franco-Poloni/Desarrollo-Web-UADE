@@ -65,8 +65,11 @@ nav a{
 footer{
     background-color: #de8016;
     color: #ffffff;
-    padding: 40px;
-    position: relative; /* VER ESTO */
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
     bottom: auto;
 }
 
@@ -143,6 +146,19 @@ footer h3{
 .nav-member{
     display: flex;
     gap: 30px;
+    align-items: center;
+}
+
+.footer-container{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-member{
+    display: flex;
+    gap: 80px;
     align-items: center;
 }
 
