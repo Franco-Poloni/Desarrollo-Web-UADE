@@ -1,6 +1,50 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 30px;
+    gap: 30px;
+}
+
+label{
+    color: rgb(109, 60, 8);
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 .formulario-container{
-    border: 1px solid black;
     width: 400px;
+    height: auto;
+    padding: 1px;
     
+}
+
+.formulario{
+    padding: 40px;
+}
+
+.campos{
+    box-sizing: border-box;
+    width: 320px;
+    line-height: 40px;
+    font-size: small;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.boton{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #de8016;
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    font-size: 18px;
+    font-weight: bold;
 }

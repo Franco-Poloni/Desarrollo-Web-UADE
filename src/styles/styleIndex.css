@@ -24,7 +24,8 @@ header{
 }
 
 main {
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
+    background-color: rgb(214, 208, 198); /*Chequear color*/ 
 }
 
 img{
