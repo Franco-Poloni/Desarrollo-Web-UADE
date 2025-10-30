@@ -9,6 +9,8 @@
 </head>
 <body>
     
+    
+
     <nav>
 
         <div class="nav-container">
@@ -51,17 +53,25 @@
 
                 <div class="formulario">
 
-                    <!--<h3 style="padding: 0; margin: 0;">INGRESAR</h3>-->
 
-                    <form>
+                    <form id="registro">
                         
+                        <label>Nombre/s
+                        <input id="nombre" type="text" placeholder="Ingresá tu nombre completo" class="campos">
+                        </label>
+                        <label>Apellido/s
+                        <input id="apellido" type="text" placeholder="Ingresá tu apellido completo" class="campos">
+                        </label>                        
                         <label>Correo electrónico
-                        <input type="email" placeholder="Ingresá tu correo electrónico" class="campos">
+                        <input id="mail" type="email" placeholder="Ingresá tu correo electrónico" class="campos">
                         </label>
                         <label>Contraseña
-                        <input type="password" placeholder="Ingresá tu contraseña" class="campos">
+                        <input id="psw" type="password" placeholder="Ingresá tu contraseña" class="campos">
                         </label>
-                        <input type="button" value="INGRESAR" class="boton">
+                        <label>Repetir contraseña
+                        <input id="rpsw" type="password" placeholder="Repetí tu contraseña" class="campos">
+                        </label>
+                        <input type="submit" value="REGISTRARSE" class="boton" id="submit">
 
                     </form>
 
@@ -76,7 +86,7 @@
 
     </main>
 
-
+ 
 
 
     <footer>
@@ -111,11 +121,8 @@
 
     </footer>
 
-
-
-
-
-
+    <script src="../js/validacion.js"></script>
+    <script src="../js/navbar.js"></script>
 
 
 </body>

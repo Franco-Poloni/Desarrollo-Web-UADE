@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../styles/styleIndex.css">
     <link rel="stylesheet" href="../styles/formulario.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     
@@ -56,12 +57,12 @@
                     <form>
                         
                         <label>Correo electrónico
-                        <input type="email" placeholder="Ingresá tu correo electrónico" class="campos">
+                        <input type="email" id="User" placeholder="Ingresá tu correo electrónico" class="campos">
                         </label>
                         <label>Contraseña
-                        <input type="password" placeholder="Ingresá tu contraseña" class="campos">
+                        <input type="password" id="Pass" placeholder="Ingresá tu contraseña" class="campos">
                         </label>
-                        <input type="button" value="INGRESAR" class="boton">
+                        <input type="button" id="btnLogin" value="INGRESAR" class="boton">
 
                     </form>
 
@@ -116,7 +117,8 @@
 
 
 
-
+    <script src="../js/navbar.js"></script>
+    <script src="../js/login.js"></script>
 
 </body>
 </html>

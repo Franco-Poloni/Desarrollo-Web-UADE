@@ -8,7 +8,6 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Arial, sans-serif;
-
 }
 
 header{
@@ -42,22 +41,8 @@ nav{
     padding-bottom: 5px;
     padding-left: 40px;
     padding-right: 40px;
-    position: relative;
 }
 
-nav table{
-
-    width: 100%;
-
-}
-
-nav td{
-
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 20px;
-
-}
 
 nav a{
 
@@ -122,6 +107,16 @@ h3{
 footer h3{
     margin:0;
     padding: 0;
+}
+
+/*-----ID-----*/
+
+
+#navbar {
+  position: fixed;
+  top: 25px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -191,20 +186,4 @@ footer h3{
     color: #545454;
 }
 
-.carrito-hover{
-    position: inherit;
-}
 
-.carrito-hover:hover .carrito-hidden{
-    display: block;
-}
-
-.carrito-hidden{
-    display: none;
-    width: 300px;
-    height: 400px;
-    background-color: #ffffff;
-    position: absolute;
-    right: 10px;
-    top: 120%;
-}
