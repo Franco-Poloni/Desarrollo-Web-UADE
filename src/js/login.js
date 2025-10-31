@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
     $("#btnLogin").click(function() {
         const inputUser = $("#User").val();
@@ -10,6 +12,9 @@ $(document).ready(function(){
 
             if (usuarioEncontrado) {
                 alert("✅ Inicio de sesión correcto. Bienvenido " + usuarioEncontrado.user);
+                sessionStorage.setItem("usuarioLogueado", "1");
+                window.location.href = "../pages/index.html"
+                //redirigir
             } else {
                 alert("❌ Usuario o contraseña incorrectos");
             }
@@ -19,6 +24,19 @@ $(document).ready(function(){
     });
 });
 
-console.log("Hola");
+const logueado = sessionStorage.getItem("usuarioLogueado")
+
+if (logueado == 1){
+    $(".login").hide()
+    $(".logout").show()
+    console.log(logueado)
+
+} else {
+    $(".logout").hide()
+    $(".login").show()
+}
+
+console.log(logueado)
+
 
 
