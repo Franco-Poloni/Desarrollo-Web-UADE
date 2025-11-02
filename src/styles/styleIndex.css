@@ -121,7 +121,6 @@ footer h3{
 
 
 
-
 /*-----CLASS-----*/
 
 .banner-container{
@@ -188,4 +187,70 @@ footer h3{
     color: #545454;
 }
 
+.login{
+    display: none;
+}
 
+.logout{
+    display: none;
+}
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.miCuenta {
+  display: none;              /* oculto por defecto */
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #545454;    /* borde negro */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.miCuenta p{
+    color: #545454;
+}
+
+.miCuenta .salir{
+    color: #545454;
+    margin:15px;
+    width: fit-content;
+    align-self: flex-end; 
+}
+
+.carrito-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.carrito-cont {
+  display: none;              /* oculto por defecto */
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #545454;    /* borde negro */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+  color: #545454;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
