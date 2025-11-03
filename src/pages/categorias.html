@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Distribuidora Libre — Categorías</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Misma base visual que el index -->
+  <link rel="stylesheet" href="../styles/styleIndex.css">
+  <!-- Solo ajustes propios de esta página (ligeros, look igual al index) -->
+  <link rel="stylesheet" href="../styles/categorias.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (si lo usás en el sitio) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <!-- Banner superior -->
+  <header>
+    <div class="banner-container">
+      <p>Elegancia en cada paso • Nueva colección 2025 • 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
+
+  <!-- Navbar (idéntica al index) -->
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
+
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html" class="activo" aria-current="page">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" title="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;"></i>
+          </a>
+          <div class="miCuenta"></div>
+        </div>
+
+        <!-- Carrito (mismo lugar y estilo) -->
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+            <span id="contadorCarrito" class="contador-carrito">0</span>
+          </a>
+          <div class="carrito-cont"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / imagen superior -->
+  <main>
+    <img src="../img/fondo1.jpg" alt="Fondo principal"
+         style="width: 100%; height: 250px; object-fit: cover; display:block;">
+
+    <!-- Layout: sidebar + grilla productos (mismos tonos que index) -->
+    <section class="categorias-layout">
+      <!-- Sidebar categorías/filtros -->
+      <aside class="menu-lateral">
+        <h2>Categorías</h2>
+        <nav class="lista-categorias" id="listaCategorias">
+          <button class="boton-categoria activo" data-categoria="todas">Todas</button>
+          <button class="boton-categoria" data-categoria="hombre">Hombre</button>
+          <button class="boton-categoria" data-categoria="mujer">Mujer</button>
+          <button class="boton-categoria" data-categoria="niños">Niños</button>
+          <button class="boton-categoria" data-categoria="urbanas">Urbanas</button>
+          <button class="boton-categoria" data-categoria="deportivas">Deportivas</button>
+          <button class="boton-categoria" data-categoria="accesorios">Accesorios</button>
+        </nav>
+
+        <div class="filtros">
+          <label class="campo">
+            <span>Buscar</span>
+            <input type="text" id="buscarTexto" placeholder="Nombre del producto..." />
+          </label>
+          <label class="campo">
+            <span>Precio máximo</span>
+            <input type="number" id="precioMax" placeholder="Ej: 50000" min="0" />
+          </label>
+          <button class="boton-limpiar" id="limpiarFiltros">Limpiar filtros</button>
+        </div>
+      </aside>
+
+      <!-- Grilla de productos (misma estética de cards que el index) -->
+      <section class="productos" id="productos">
+        <article class="tarjeta-producto"
+                 data-categoria="hombre urbanas"
+                 data-id="p001" data-nombre="Zapato Hombre Clásico" data-precio="52999">
+          <img class="card-img" src="../img/zap1.png" alt="Zapato Hombre Clásico">
+          <p class="titulo-card">Zapato Hombre</p>
+          <p class="descripcion">Cuero legítimo. Ideal vestir.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="52999">$52.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="mujer urbanas"
+                 data-id="p002" data-nombre="Chatita Mujer Soft" data-precio="34999">
+          <img class="card-img" src="../img/zap 8.png" alt="Chatita Mujer Soft">
+          <p class="titulo-card">Chatita Mujer</p>
+          <p class="descripcion">Plantilla acolchada. Ultra cómoda.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="34999">$34.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="deportivas"
+                 data-id="p003" data-nombre="Zapatilla Urbana Neo" data-precio="43999">
+          <img class="card-img" src="../img/zap 7.png" alt="Zapatilla Urbana Neo">
+          <p class="titulo-card">Zapatilla Urbana</p>
+          <p class="descripcion">Suela comfy y agarre diario.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="43999">$43.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="niños deportivas"
+                 data-id="p004" data-nombre="Zapatilla Kids Runner" data-precio="27999">
+          <img class="card-img" src="../img/zap 6.png" alt="Zapatilla Kids Runner">
+          <p class="titulo-card">Zapatilla Niños</p>
+          <p class="descripcion">Ligera, pensada para jugar.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="27999">$27.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="mujer"
+                 data-id="p005" data-nombre="Bota Marrón Lady" data-precio="58999">
+          <img class="card-img" src="../img/sap3.png" alt="Bota Marrón Lady">
+          <p class="titulo-card">Bota Marrón Lady</p>
+          <p class="descripcion">Caña media, look otoño-invierno.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="58999">$58.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="mujer"
+                 data-id="p006" data-nombre="Sandalia Lady Noche" data-precio="31999">
+          <img class="card-img" src="../img/sap4.png" alt="Sandalia Lady Noche">
+          <p class="titulo-card">Sandalia Lady Noche</p>
+          <p class="descripcion">Taco medio. Ideal eventos.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="31999">$31.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto"
+                 data-categoria="accesorios"
+                 data-id="p007" data-nombre="Cinto Cuero Premium" data-precio="14999">
+          <img class="card-img" src="../img/cinto.png" alt="Cinto Cuero Premium">
+          <p class="titulo-card">Cinto Cuero Premium</p>
+          <p class="descripcion">Hebilla metálica, 100% cuero.</p>
+          <div class="fila-precio">
+            <span class="precio" data-valor="14999">$14.999</span>
+            <button class="btn-agregar">Agregar</button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!-- Lo más vendido (mismo bloque que index) -->
+    <hr style="border: none; width: 90%; height: 1px; background-color: grey; margin: 30px auto;">
+    <h3 style="text-align:center;">LO MÁS VENDIDO</h3>
+    <div class="productos" style="max-width:1200px; margin:10px auto 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px;">
+      <div class="card">
+        <img src="../img/zap1.png" alt="Zapato Elegante">
+        <p>Zapato Elegante</p>
+      </div>
+      <div class="card">
+        <img src="../img/zap2.png" alt="Zapato Zapatilla">
+        <p>Zapato Zapatilla</p>
+      </div>
+      <div class="card">
+        <img src="../img/sap3.png" alt="Bota Marrón Lady">
+        <p>Bota Marrón Lady</p>
+      </div>
+      <div class="card">
+        <img src="../img/sap4.png" alt="Sandalia Lady Noche">
+        <p>Sandalia Lady Noche</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (igual al index) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="logo" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gomez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-member">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel del carrito + overlay + toast -->
+  <aside class="panel-carrito" id="panelCarrito" aria-hidden="true">
+    <header class="encabezado-carrito">
+      <h2>Tu carrito</h2>
+      <button class="cerrar-carrito" id="cerrarCarrito" aria-label="Cerrar">×</button>
+    </header>
+    <div class="cuerpo-carrito" id="itemsCarrito">
+      <p class="vacio">Tu carrito está vacío.</p>
+    </div>
+    <footer class="pie-carrito">
+      <div class="total">
+        <span>Total:</span>
+        <strong id="totalCarrito">$0</strong>
+      </div>
+      <button class="boton-comprar" id="botonComprar">Finalizar compra</button>
+    </footer>
+  </aside>
+
+  <div class="fondo" id="fondo"></div>
+  <div class="mensaje" id="mensaje" aria-live="polite"></div>
+
+  <!-- Scripts globales -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/login.js"></script>
+  <!-- Lógica de categorías (usa estilo del sitio) -->
+  <script src="../js/categorias.js"></script>
+</body>
+</html>

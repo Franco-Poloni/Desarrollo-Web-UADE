@@ -1,129 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Distribuidora Libre | Registrarse</title>
-    <link rel="stylesheet" href="../styles/styleIndex.css">
-    <link rel="stylesheet" href="../styles/formulario.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <meta charset="UTF-8" />
+  <title>Distribuidora Libre | Registrarse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS base -->
+  <link rel="stylesheet" href="../styles/styleIndex.css">
+  <!-- CSS de formulario -->
+  <link rel="stylesheet" href="../styles/formulario.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (opcional) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    
-    
 
-    <nav>
+  <header>
+    <div class="banner-container" role="banner">
+      <p>Elegancia en cada paso, Zapatos que marcan tu estilo, ¡Descubrí la nueva colección 2025! 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
 
-        <div class="nav-container">
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
 
-            <div class="nav-member">
-                
-                <a href="../pages/index.html"><img src="../img/Logo.png" alt="logo" style="max-width: 50px; height: auto; border-radius: 20px;"></a>
+      <div class="nav-member">
+        <a class="login activo" href="../pages/registrarse.html" aria-current="page">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
 
-                <a href="../pages/nosotros.html">NOSOTROS</a>
-                
-                <a href="../pages/categorias.html">CATEGORIAS</a>
-
-                <a href="../pages/ofertas.html">OFERTAS</a>
-
-                <a href="../pages/contacto.html">CONTACTO</a>
-
-            </div>
-            <div class="nav-member">
-
-                <a href="../pages/registrarse.html">REGISTRARSE</a>
-
-                <a href="../pages/ingresar.html">INGRESAR</a>
-
-                <a href=""><img src="../img/carrito.png" width="25px"></a>
-
-            </div>
-        </div>
-    </nav>
-
-    <main style="width: 100%; display: inline-flex;padding: 0; align-items: center;">
-
-
-        <div style="width: 50%;">
-            <img src="../img/fondoingresar.jpg" style="width: 100%; ;max-width: 100%;">
-
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
         </div>
 
-        <div style="width: 50%;justify-content: center; display: flex;">
-            <div class="formulario-container">
-
-                <div class="formulario">
-
-
-                    <form id="registro">
-                        
-                        <label>Nombre/s
-                        <input id="nombre" type="text" placeholder="Ingresá tu nombre completo" class="campos">
-                        </label>
-                        <label>Apellido/s
-                        <input id="apellido" type="text" placeholder="Ingresá tu apellido completo" class="campos">
-                        </label>                        
-                        <label>Correo electrónico
-                        <input id="mail" type="email" placeholder="Ingresá tu correo electrónico" class="campos">
-                        </label>
-                        <label>Contraseña
-                        <input id="psw" type="password" placeholder="Ingresá tu contraseña" class="campos">
-                        </label>
-                        <label>Repetir contraseña
-                        <input id="rpsw" type="password" placeholder="Repetí tu contraseña" class="campos">
-                        </label>
-                        <input type="submit" value="REGISTRARSE" class="boton" id="submit">
-
-                    </form>
-
-
-                </div>
-
-
-            </div>
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
         </div>
+      </div>
+    </div>
+  </nav>
 
+  <main style="width: 100%; display: inline-flex; padding: 0; align-items: center;">
+    <div style="width: 50%;">
+      <img src="../img/fondoingresar.jpg" style="width: 100%; max-width: 100%;" alt="Imagen registrarse">
+    </div>
 
-
-    </main>
-
- 
-
-
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-member">
-                <a href="../pages/index.html">
-                    <img src="../img/Logo.png" alt="logo" style="max-width: 100px; height: auto; border-radius: 20px;">
-                </a>
-
-                <div>
-                    <h3>CONTACTO</h3>
-                    <ul>
-
-                        <li>Tel: +54 9 11 3078-3668</li>
-                        <li>Cel: +54 9 11 3078-3668</li>
-                        <li>distribuidoralibreok@gmail.com</li>
-                        <li>Valentín Gomez 2616, Balvanera, CABA, Argentina.</li>
-
-                    </ul>
-                </div>
-
-            </div>
-            
-            <div class="footer-member">
-                <a href=""><i class="bx bxl-facebook"></i></a>
-                <a href=""><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.instagram.com/distribuidoralibre"><i class="bx bxl-instagram"></i></a>
-            </div>
+    <div style="width: 50%; justify-content: center; display: flex;">
+      <div class="formulario-container">
+        <div class="formulario">
+          <form id="registro">
+            <label>Nombre/s
+              <input id="nombre" type="text" placeholder="Ingresá tu nombre completo" class="campos">
+            </label>
+            <label>Apellido/s
+              <input id="apellido" type="text" placeholder="Ingresá tu apellido completo" class="campos">
+            </label>
+            <label>Correo electrónico
+              <input id="mail" type="email" placeholder="Ingresá tu correo electrónico" class="campos">
+            </label>
+            <label>Contraseña
+              <input id="psw" type="password" placeholder="Ingresá tu contraseña" class="campos">
+            </label>
+            <label>Repetir contraseña
+              <input id="rpsw" type="password" placeholder="Repetí tu contraseña" class="campos">
+            </label>
+            <input type="submit" value="REGISTRARSE" class="boton" id="submit">
+          </form>
         </div>
+      </div>
+    </div>
+  </main>
 
-    </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gómez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-member">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="../js/validacion.js"></script>
-    <script src="../js/navbar.js"></script>
-
-
+  <script src="../js/validacion.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 </html>

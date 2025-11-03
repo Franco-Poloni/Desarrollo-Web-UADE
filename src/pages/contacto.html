@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto • Distribuidora Libre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS base (igual index) -->
+  <link rel="stylesheet" href="../styles/styleIndex.css">
+  <!-- CSS específico -->
+  <link rel="stylesheet" href="../styles/contacto.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (opcional) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="banner-container" role="banner">
+      <p>Elegancia en cada paso, Zapatos que marcan tu estilo, ¡Descubrí la nueva colección 2025! 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
+
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html" class="activo" aria-current="page">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
+        </div>
+
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-contact">
+      <img src="../img/fondo1.jpg" alt="Fondo Contacto" class="hero-contact-bg">
+      <div class="hero-contact-content">
+        <h1>Contacto</h1>
+        <p>Escribinos por dudas, pedidos o mayoristas. ¡Respondemos rápido!</p>
+      </div>
+    </section>
+
+    <!-- Contenido: Form + FAQ -->
+    <section class="contact-grid">
+      <!-- Columna izquierda: Formulario + WhatsApp -->
+      <div class="contact-card">
+        <h2>Enviános tu mensaje</h2>
+
+        <!-- Form sin backend: arma mailto automáticamente -->
+        <form id="contactForm">
+          <div class="field">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+
+          <div class="field">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Consulta / Pedido / Mayorista..." required>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <i class="bx bx-send"></i> Enviar
+          </button>
+
+          <p class="mini-note">* Este formulario abre tu cliente de correo para enviar el mensaje (sin backend).</p>
+        </form>
+
+        <!-- Mini WhatsApp -->
+        <div class="whatsapp-box">
+          <div class="wp-icon"><i class="bx bxl-whatsapp"></i></div>
+          <div class="wp-content">
+            <h3>¿Preferís WhatsApp?</h3>
+            <p>Escribinos directo y te respondemos al toque.</p>
+            <!-- Reemplazá 5491130783668 por tu número real en formato internacional -->
+            <a class="btn-wp" href="https://wa.me/5491130783668?text=Hola%20Distribuidora%20Libre,%20tengo%20una%20consulta%20sobre%20calzado."
+               target="_blank" rel="noopener">Chatear por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: Preguntas frecuentes -->
+      <aside class="faq-card">
+        <h2>Preguntas frecuentes</h2>
+
+        <details open>
+          <summary>¿El local es “posta” y confiable?</summary>
+          <p>Sí. Somos “Distribuidora Libre”, trabajamos con marcas reconocidas y excelentes referencias de clientes de todo el país.</p>
+        </details>
+
+        <details>
+          <summary>¿La atención es buena?</summary>
+          <p>Nos enfocamos en atención cercana y resolutiva. Te ayudamos a elegir talle y modelo, y damos seguimiento post-venta.</p>
+        </details>
+
+        <details>
+          <summary>¿La calidad del calzado es buena?</summary>
+          <p>Seleccionamos materiales de primera y modelos probados en el día a día. Priorizamos durabilidad y confort.</p>
+        </details>
+
+        <details>
+          <summary>¿Hacen envíos a todo el país?</summary>
+          <p>Sí, contamos con logística a nivel nacional. Te pasamos costo y tiempos según tu ubicación.</p>
+        </details>
+
+        <details>
+          <summary>¿Qué medios de pago aceptan?</summary>
+          <p>Efectivo (−10%), tarjeta de crédito (+10%) y transferencia (+5%). Consultá promos vigentes.</p>
+        </details>
+
+        <details>
+          <summary>¿Puedo cambiar o devolver?</summary>
+          <p>Tenés cambios por talle o falla dentro del plazo informado. El producto debe estar sin uso y con su empaque original.</p>
+        </details>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gómez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-member">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mailto auto con JS (sin backend) -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre  = document.getElementById('nombre').value.trim();
+      const correo  = document.getElementById('correo').value.trim();
+      const asunto  = document.getElementById('asunto').value.trim() || 'Consulta';
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const to = 'distribuidoralibreok@gmail.com';
+      const subject = encodeURIComponent('Contacto Web — ' + asunto);
+      const body = encodeURIComponent(
+        'Nombre: ' + nombre + '\n' +
+        'Correo: ' + correo + '\n\n' +
+        'Mensaje:\n' + mensaje + '\n'
+      );
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

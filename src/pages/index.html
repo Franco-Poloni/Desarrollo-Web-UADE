@@ -1,150 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Distribuidora Libre</title>
-    <link rel="stylesheet" href="../styles/styleIndex.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <script src="../js/jquery-3.7.1.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>Distribuidora Libre</title>
+
+  <!-- Para que se vea bien en mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tus estilos existentes (no se tocan) -->
+  <link rel="stylesheet" href="../styles/styleIndex.css" />
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+
+  <!-- jQuery (si lo usás en otras páginas) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <div class="banner-container" role="banner">
+      <p>Elegancia en cada paso, Zapatos que marcan tu estilo, ¡Descubrí la nueva colección 2025! 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
 
-    <header>
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
 
-        <div class="banner-container">
-            <p>Elegancia en cada paso, Zapatos que marcan tu estilo, Descubrí la nueva colección 2025! 🚚Envíos a todo el país 🇦🇷</p>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html" class="activo" aria-current="page">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
         </div>
 
-    </header>
-
-    <nav id="navbar">
-
-        <div class="nav-container">
-
-            <div class="nav-member">
-                
-                <a href="../pages/index.html"><img src="../img/Logo.png" alt="logo" style="max-width: 50px; height: auto; border-radius: 20px;"></a>
-
-                <a href="../pages/nosotros.html">NOSOTROS</a>
-                
-                <a href="../pages/categorias.html">CATEGORIAS</a>
-
-                <a href="../pages/ofertas.html">OFERTAS</a>
-
-                <a href="../pages/contacto.html">CONTACTO</a>
-
-            </div>
-            <div class="nav-member">
-
-                <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
-
-                <a class="login" href="../pages/ingresar.html">INGRESAR</a>
-
-                <div class="user-menu">
-                    <a class="logout" href="../pages/index.html">
-                        <i class="bx bxs-user-account" style="font-size: 25px;"></i>
-                    </a>
-                    
-                    <div class="miCuenta"></div>
-                </div>
-
-                <div class="carrito-menu">
-                    <a class="carrito-desplegable" href="#">
-                        <i class="bx bx-cart" style="font-size: 25px;"></i>
-                    </a>
-                    
-                    <div class="carrito-cont"></div>
-                </div>
-
-            </div>
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <img src="../img/fondo1.jpg" alt="Fondo principal" 
-        style="width: 100%; height: 250px; object-fit: cover;">
+  <main>
+    <img src="../img/fondo1.jpg" alt="Fondo principal nueva colección" loading="lazy"
+         style="width: 100%; height: 250px; object-fit: cover; display:block;">
 
-        <h3>REVISÁ NUESTROS PRODUCTOS</h3>
-        <div class="productos">
-            <div class="card">
-                <img src="../img/zap 9.png" alt="Zapato 1">
-                <p>Zapato Hombre</p>
-            </div>
-            <div class="card">
-                <img src="../img/zap 8.png" alt="Zapato 2">
-                <p>Chatita Mujer </p>
-            </div>
-            <div class="card">
-                <img src="../img/zap 7.png" alt="Zapato 3">
-                <p>Zapatilla Urbana</p>
-            </div>
-            <div class="card">
-                <img src="../img/zap 6.png" alt="Zapato 4">
-                <p>Zapatilla Niños</p>
-            </div>
+    <h3>REVISÁ NUESTROS PRODUCTOS</h3>
+    <div class="productos">
+      <div class="card">
+        <img src="../img/zap 9.png" alt="Zapato para hombre" class="card-img" loading="lazy">
+        <p>Zapato Hombre</p>
+      </div>
+      <div class="card">
+        <img src="../img/zap 8.png" alt="Chatita para mujer" class="card-img" loading="lazy">
+        <p>Chatita Mujer</p>
+      </div>
+      <div class="card">
+        <img src="../img/zap 7.png" alt="Zapatilla urbana" class="card-img" loading="lazy">
+        <p>Zapatilla Urbana</p>
+      </div>
+      <div class="card">
+        <img src="../img/zap 6.png" alt="Zapatilla para niños" class="card-img" loading="lazy">
+        <p>Zapatilla Niños</p>
+      </div>
+    </div>
+
+    <hr style="border: none; width: 90%; height: 1px; background-color: grey;">
+
+    <h3>LO MÁS VENDIDO</h3>
+    <div class="productos">
+      <div class="card">
+        <img src="../img/zap1.png" alt="Zapato elegante" class="card-img" loading="lazy">
+        <p>Zapato Elegante</p>
+      </div>
+      <div class="card">
+        <img src="../img/zap2.png" alt="Zapato tipo zapatilla" class="card-img" loading="lazy">
+        <p>Zapato Zapatilla</p>
+      </div>
+      <div class="card">
+        <img src="../img/sap3.png" alt="Bota marrón Lady" class="card-img" loading="lazy">
+        <p>Bota Marrón Lady</p>
+      </div>
+      <div class="card">
+        <img src="../img/sap4.png" alt="Sandalia Lady Noche" class="card-img" loading="lazy">
+        <p>Sandalia Lady Noche</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gómez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
         </div>
-        <hr style="border: none; width: 90%; height: 1px; background-color: grey;">
-        <h3>LO MAS VENDIDO</h3>
-        <div class="productos">
-            <div class="card">
-                <img src="../img/zap1.png" alt="Zapato 1">
-                <p>Zapato Elegante </p>
-            </div>
-            <div class="card">
-                <img src="../img/zap2.png" alt="Zapato 2">
-                <p>Zapato Zapatilla</p>
-            </div>
-            <div class="card">
-                <img src="../img/sap3.png" alt="Zapato 3">
-                <p>Bota Marron Lady</p>
-            </div>
-            <div class="card">
-                <img src="../img/sap4.png" alt="Zapato 4">
-                <p>Sandalia Lady Noche </p>
-            </div>
-        </div>
-    </main>
+      </div>
+      
+      <div class="footer-member">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-member">
-                <a href="../pages/index.html">
-                    <img src="../img/Logo.png" alt="logo" style="max-width: 100px; height: auto; border-radius: 20px;">
-                </a>
-
-                <div>
-                    <h3>CONTACTO</h3>
-                    <ul>
-
-                        <li>Tel: +54 9 11 3078-3668</li>
-                        <li>Cel: +54 9 11 3078-3668</li>
-                        <li>distribuidoralibreok@gmail.com</li>
-                        <li>Valentín Gomez 2616, Balvanera, CABA, Argentina.</li>
-
-                    </ul>
-                </div>
-
-            </div>
-            
-            <div class="footer-member">
-                <a href=""><i class="bx bxl-facebook"></i></a>
-                <a href=""><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.instagram.com/distribuidoralibre"><i class="bx bxl-instagram"></i></a>
-            </div>
-        </div>
-
-    </footer>
-
-    <script src="../js/navbar.js"></script>
-    <script src="../js/login.js"></script>
-
-
+  <!-- Scripts de tu sitio -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/login.js"></script>
 </body>
-
-
-
 </html>

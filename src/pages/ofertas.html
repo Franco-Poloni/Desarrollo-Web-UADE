@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ofertas • Distribuidora Libre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS base (igual index) -->
+  <link rel="stylesheet" href="../styles/styleIndex.css">
+  <!-- CSS específico de Ofertas -->
+  <link rel="stylesheet" href="../styles/ofertas.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (opcional) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="banner-container" role="banner">
+      <p>Elegancia en cada paso, Zapatos que marcan tu estilo, ¡Descubrí la nueva colección 2025! 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
+
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html" class="activo" aria-current="page">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
+        </div>
+
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero / Encabezado -->
+    <section class="hero-offers">
+      <img src="../img/fondo1.jpg" alt="Fondo Ofertas" class="hero-offers-bg">
+      <div class="hero-offers-content">
+        <h1>Ofertas Imperdibles</h1>
+        <p>Promos limitadas en calzado elegante, urbano, running y más.</p>
+      </div>
+    </section>
+
+    <!-- 30% OFF -->
+    <section class="offers-section">
+      <div class="offers-head">
+        <h2>🔥 30% OFF</h2>
+        <p>Descuentos máximos por tiempo limitado.</p>
+      </div>
+
+      <div class="productos">
+        <div class="card">
+          <span class="badge off-30">30% OFF</span>
+          <img src="../img/zap1.png" alt="Zapato Elegante 30% OFF">
+          <p>Zapato Elegante</p>
+          <p class="price">
+            <span class="old">$100.000</span>
+            <span class="new">$70.000</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-30">30% OFF</span>
+          <img src="../img/sap4.png" alt="Sandalia Lady Noche 30% OFF">
+          <p>Sandalia Lady Noche</p>
+          <p class="price">
+            <span class="old">$80.000</span>
+            <span class="new">$56.000</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-30">30% OFF</span>
+          <img src="../img/zap 7.png" alt="Zapatilla Urbana 30% OFF">
+          <p>Zapatilla Urbana</p>
+          <p class="price">
+            <span class="old">$95.000</span>
+            <span class="new">$66.500</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 20% OFF -->
+    <section class="offers-section">
+      <div class="offers-head">
+        <h2>🔥 20% OFF</h2>
+        <p>Ideal para renovar tus básicos de siempre.</p>
+      </div>
+
+      <div class="productos">
+        <div class="card">
+          <span class="badge off-20">20% OFF</span>
+          <img src="../img/zap2.png" alt="Zapato Zapatilla 20% OFF">
+          <p>Zapato Zapatilla</p>
+          <p class="price">
+            <span class="old">$90.000</span>
+            <span class="new">$72.000</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-20">20% OFF</span>
+          <img src="../img/sap3.png" alt="Bota Marrón Lady 20% OFF">
+          <p>Bota Marrón Lady</p>
+          <p class="price">
+            <span class="old">$110.000</span>
+            <span class="new">$88.000</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-20">20% OFF</span>
+          <img src="../img/zap 6.png" alt="Zapatilla Niños 20% OFF">
+          <p>Zapatilla Niños</p>
+          <p class="price">
+            <span class="old">$70.000</span>
+            <span class="new">$56.000</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 10% OFF -->
+    <section class="offers-section">
+      <div class="offers-head">
+        <h2>🔥 10% OFF</h2>
+        <p>Un plus para llevarte ese modelo que querías.</p>
+      </div>
+
+      <div class="productos">
+        <div class="card">
+          <span class="badge off-10">10% OFF</span>
+          <img src="../img/zap 8.png" alt="Chatita Mujer 10% OFF">
+          <p>Chatita Mujer</p>
+          <p class="price">
+            <span class="old">$60.000</span>
+            <span class="new">$54.000</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-10">10% OFF</span>
+          <img src="../img/zap 9.png" alt="Zapato Hombre 10% OFF">
+          <p>Zapato Hombre</p>
+          <p class="price">
+            <span class="old">$85.000</span>
+            <span class="new">$76.500</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge off-10">10% OFF</span>
+          <img src="../img/zap1.png" alt="Zapato Elegante 10% OFF">
+          <p>Zapato Elegante</p>
+          <p class="price">
+            <span class="old">$100.000</span>
+            <span class="new">$90.000</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Condiciones de pago -->
+    <section class="pay-info">
+      <div class="pay-box">
+        <h3>Condiciones de pago</h3>
+        <ul>
+          <li><strong>Efectivo:</strong> 10% de descuento adicional (−10%).</li>
+          <li><strong>Tarjeta de crédito:</strong> 10% de recargo (+10%).</li>
+          <li><strong>Transferencia bancaria:</strong> 5% de recargo (+5%).</li>
+        </ul>
+        <p class="note">Los precios “OFERTA” ya incluyen el descuento del 10/20/30% indicado en cada producto.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gómez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-member">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

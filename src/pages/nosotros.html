@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nosotros • Distribuidora Libre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS base del sitio (igual que index) -->
+  <link rel="stylesheet" href="../styles/styleIndex.css">
+  <!-- CSS específico de esta página (tu archivo existente) -->
+  <link rel="stylesheet" href="../styles/nosotros.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (si lo usás en otras páginas) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="banner-container" role="banner">
+      <p>Elegancia en cada paso, Zapatos que marcan tu estilo, ¡Descubrí la nueva colección 2025! 🚚 Envíos a todo el país 🇦🇷</p>
+    </div>
+  </header>
+
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-member">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
+        </a>
+        <a href="../pages/nosotros.html" class="activo" aria-current="page">NOSOTROS</a>
+        <a href="../pages/categorias.html">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
+        </div>
+
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero / Encabezado de página -->
+    <section class="hero">
+      <img src="../img/fondo1.jpg" alt="Fondo Nosotros" class="hero-bg">
+      <div class="hero-content">
+        <img src="../img/Logo.png" alt="Logo Distribuidora Libre" class="hero-logo">
+        <h1 class="brand-name">Distribuidora Libre</h1>
+        <p class="brand-tag">Vendemos a los mejores del país y somos super recomendados en todos los lugares.</p>
+      </div>
+    </section>
+
+    <!-- Sobre la empresa -->
+    <section class="about">
+      <div class="about-inner">
+        <h2>Quiénes somos</h2>
+        <p>
+          En <strong>Distribuidora Libre</strong> nos especializamos en calzado para todas las ocasiones:
+          elegante, urbano, running y básico. Nos eligen por la calidad, el precio y la atención cercana.
+          Trabajamos con marcas reconocidas y una logística ágil para que tus pedidos lleguen rápido
+          a cualquier punto del país.
+        </p>
+      </div>
+    </section>
+
+    <!-- Puntos fuertes -->
+    <section class="strengths">
+      <h2>Nuestros puntos fuertes</h2>
+      <div class="strengths-grid">
+        <article class="strength-card">
+          <i class="bx bx-badge-check"></i>
+          <h3>Calidad garantizada</h3>
+          <p>Materiales de primera y controles que aseguran durabilidad y confort.</p>
+        </article>
+
+        <article class="strength-card">
+          <i class="bx bx-package"></i>
+          <h3>Stock y variedad</h3>
+          <p>Amplio catálogo en talles y modelos para todos los estilos.</p>
+        </article>
+
+        <article class="strength-card">
+          <i class="bx bx-run"></i>
+          <h3>Comodidad real</h3>
+          <p>Probados en el día a día: livianos, resistentes y listos para rendir.</p>
+        </article>
+
+        <article class="strength-card">
+          <i class="bx bx-like"></i>
+          <h3>Recomendados</h3>
+          <p>Clientes satisfechos en todo el país confían en nosotros.</p>
+        </article>
+
+        <article class="strength-card">
+          <i class="bx bx-rocket"></i>
+          <h3>Envíos a todo el país</h3>
+          <p>Logística optimizada para que llegue rápido a tu puerta.</p>
+        </article>
+
+        <article class="strength-card">
+          <i class="bx bx-headphone"></i>
+          <h3>Atención cercana</h3>
+          <p>Soporte humano y respuestas rápidas para lo que necesites.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="location">
+      <h2>Nuestra ubicación</h2>
+      <p class="location-text">Argentina 🇦🇷 — Operamos con cobertura nacional.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-member">
+        <a href="../pages/index.html">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 100px; height: auto; border-radius: 20px;">
+        </a>
+        <div>
+          <h3>CONTACTO</h3>
+          <ul>
+            <li>Tel: +54 9 11 3078-3668</li>
+            <li>Cel: +54 9 11 3078-3668</li>
+            <li>distribuidoralibreok@gmail.com</li>
+            <li>Valentín Gómez 2616, Balvanera, CABA, Argentina.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-member">
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/distribuidoralibre" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
