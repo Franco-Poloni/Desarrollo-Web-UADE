@@ -24,12 +24,17 @@ $(document).ready(function(){
         });
     });
 
-
+        /*SALIR*/
+    $(".salir").click(function() {
+        sessionStorage.setItem("usuarioLogueado", "0");
+        alert("Usted ha salido de su cuenta exitosamente.");
+    });
+    
     const logueado = sessionStorage.getItem("usuarioLogueado")
     if (logueado == 1){
         $(".login").hide()
         $(".logout").show()
-        console.log(logueado)
+        console.log(sessionStorage.getItem("usuarioLogueado"))
     } else {
         $(".logout").hide()
         $(".miCuenta").hide()
@@ -52,12 +57,9 @@ $(document).ready(function(){
         if (!$(e.target).closest('.user-menu').length) {
             $(".miCuenta").hide();
         }
-    });
-
-    /*SALIR*/
-    $(".salir").click(function() {
-        sessionStorage.setItem("usuarioLogueado", "0");
-        alert("Usted ha salido de su cuenta exitosamente.");
+        if (!$(e.target).closest('.carrito-menu').length) {
+            $(".carrito-cont").hide();
+        }
     });
 
 
@@ -66,16 +68,8 @@ $(document).ready(function(){
         e.preventDefault();
         $(".carrito-cont").toggle();
 
-        $(".carrito-cont").html(
-            `<p style="margin:15px;"><strong>MIS COMPRAS</strong></p>
-            <a class="salir" href="../pages/index.html"><strong>SALIR</strong></a>`
-        );
+        
     });
 
-    $(document).click(function(e) {
-        if (!$(e.target).closest('.carrito-menu').length) {
-            $(".carrito-cont").hide();
-        }
-    });
 
 });
