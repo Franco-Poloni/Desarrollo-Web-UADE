@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../styles/contacto.css">
   <!-- Iconos -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- jQuery (si lo usás en otras páginas) -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 
@@ -19,26 +21,35 @@
     </div>
   </header>
 
-  <nav>
+  <nav id="navbar" aria-label="Navegación principal">
     <div class="nav-container">
       <div class="nav-member">
-        <a href="../pages/index.html">
-          <img src="../img/Logo.png" alt="logo" style="max-width: 50px; height: auto; border-radius: 20px;">
+        <a href="../pages/index.html" aria-label="Inicio">
+          <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
         </a>
-        <a href="../pages/nosotros.html">NOSOTROS</a>
-        <a href="../pages/categorias.html">CATEGORIAS</a>
-        <a href="../pages/ofertas.html">OFERTAS</a>
-        <a href="../pages/contacto.html" class="active">CONTACTO</a>
-      </div>
-      <div class="nav-member">
-        <a href="../pages/registrarse.html">REGISTRARSE</a>
-        <a href="../pages/ingresar.html">INGRESAR</a>
 
-        <div class="carrito-hover">
-          <a href="#"><img src="../img/carrito.png" width="25" alt="Carrito"></a>
-          <div class="carrito-hidden">
-            <h4>Mis Compras</h4>
-          </div>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/categorias.html" class="activo" aria-current="page">CATEGORÍAS</a>
+        <a href="../pages/ofertas.html">OFERTAS</a>
+        <a href="../pages/contacto.html">CONTACTO</a>
+      </div>
+
+      <div class="nav-member">
+        <a class="login" href="../pages/registrarse.html">REGISTRARSE</a>
+        <a class="login" href="../pages/ingresar.html">INGRESAR</a>
+
+        <div class="user-menu">
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="miCuenta"></div>
+        </div>
+
+        <div class="carrito-menu">
+          <a class="carrito-desplegable" href="#" aria-label="Carrito">
+            <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
+          </a>
+          <div class="carrito-cont"></div>
         </div>
       </div>
     </div>
@@ -186,5 +197,9 @@
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   </script>
+  <!-- Scripts de tu sitio -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/login.js"></script>
+
 </body>
 </html>

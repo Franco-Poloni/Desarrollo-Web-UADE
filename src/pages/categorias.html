@@ -12,7 +12,7 @@
 
   <!-- Iconos -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <!-- jQuery (si lo usás en el sitio) -->
+  <!-- jQuery (si lo usás en otras páginas) -->
   <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -27,7 +27,6 @@
   <!-- Navbar (idéntica al index) -->
   <nav id="navbar" aria-label="Navegación principal">
     <div class="nav-container">
-
       <div class="nav-member">
         <a href="../pages/index.html" aria-label="Inicio">
           <img src="../img/Logo.png" alt="Logo Distribuidora Libre" style="max-width: 50px; height: auto; border-radius: 20px;">
@@ -44,17 +43,15 @@
         <a class="login" href="../pages/ingresar.html">INGRESAR</a>
 
         <div class="user-menu">
-          <a class="logout" href="../pages/index.html" title="Mi cuenta">
-            <i class="bx bxs-user-account" style="font-size: 25px;"></i>
+          <a class="logout" href="../pages/index.html" aria-label="Mi cuenta">
+            <i class="bx bxs-user-account" style="font-size: 25px;" aria-hidden="true"></i>
           </a>
           <div class="miCuenta"></div>
         </div>
 
-        <!-- Carrito (mismo lugar y estilo) -->
         <div class="carrito-menu">
           <a class="carrito-desplegable" href="#" aria-label="Carrito">
             <i class="bx bx-cart" style="font-size: 25px;" aria-hidden="true"></i>
-            <span id="contadorCarrito" class="contador-carrito">0</span>
           </a>
           <div class="carrito-cont"></div>
         </div>
@@ -168,18 +165,6 @@
             <button class="btn-agregar">Agregar</button>
           </div>
         </article>
-
-        <article class="tarjeta-producto"
-                 data-categoria="accesorios"
-                 data-id="p007" data-nombre="Cinto Cuero Premium" data-precio="14999">
-          <img class="card-img" src="../img/cinto.png" alt="Cinto Cuero Premium">
-          <p class="titulo-card">Cinto Cuero Premium</p>
-          <p class="descripcion">Hebilla metálica, 100% cuero.</p>
-          <div class="fila-precio">
-            <span class="precio" data-valor="14999">$14.999</span>
-            <button class="btn-agregar">Agregar</button>
-          </div>
-        </article>
       </section>
     </section>
 
@@ -258,6 +243,6 @@
   <script src="../js/navbar.js"></script>
   <script src="../js/login.js"></script>
   <!-- Lógica de categorías (usa estilo del sitio) -->
-  <script src="../js/categorias.js"></script>
+  <!--<script src="../js/categorias.js"></script>-->
 </body>
 </html>

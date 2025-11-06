@@ -24,12 +24,17 @@ $(document).ready(function(){
         });
     });
 
+        const nombre = sessionStorage.getItem("usuarioNombre");
+        $(".miCuenta").html(
+            `<p style="margin:15px;">¡Bienvenido, <strong>${nombre}</strong>!</p>
+            <a class="salir" href="../pages/index.html"><strong>SALIR</strong></a>`
+        );
         /*SALIR*/
-    $(".salir").click(function() {
-        sessionStorage.setItem("usuarioLogueado", "0");
+        $(".salir").click(function() {
+        sessionStorage.clear();
         alert("Usted ha salido de su cuenta exitosamente.");
     });
-    
+
     const logueado = sessionStorage.getItem("usuarioLogueado")
     if (logueado == 1){
         $(".login").hide()
@@ -46,11 +51,7 @@ $(document).ready(function(){
         e.preventDefault();
         $(".miCuenta").toggle();
 
-        const nombre = sessionStorage.getItem("usuarioNombre");
-        $(".miCuenta").html(
-            `<p style="margin:15px;">¡Bienvenido, <strong>${nombre}</strong>!</p>
-            <a class="salir" href="../pages/index.html"><strong>SALIR</strong></a>`
-        );
+
     });
 
     $(document).click(function(e) {

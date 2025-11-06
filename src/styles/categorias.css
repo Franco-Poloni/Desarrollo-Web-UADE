@@ -7,6 +7,10 @@ body {
   background: rgb(214, 208, 198); /* gris cálido arena */
 }
 
+main{
+  width: 100%;
+}
+
 /* Layout */
 .categorias-layout {
   max-width: 1200px;
@@ -106,6 +110,7 @@ body {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  max-width: 1000px;
 }
 
 /* Tarjeta de producto */

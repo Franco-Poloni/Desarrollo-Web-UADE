@@ -85,11 +85,7 @@ itemsCarrito.addEventListener("click", (e) => {
 });
 
 // Abrir / cerrar carrito
-$("#abrirCarrito").addEventListener("click", () => {
-  panelCarrito.setAttribute("aria-hidden", "false");
-  fondo.classList.add("mostrar");
-});
-$("#cerrarCarrito").addEventListener("click", cerrarCarrito);
+//$("#cerrarCarrito").addEventListener("click", cerrarCarrito);
 fondo.addEventListener("click", cerrarCarrito);
 function cerrarCarrito() {
   panelCarrito.setAttribute("aria-hidden", "true");
