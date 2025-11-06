@@ -1,6 +1,7 @@
 
 
 $(document).ready(function(){
+    if ($("#btnLogin").length) {
     $("#btnLogin").click(function() {
         const inputUser = $("#User").val();
         const inputPass = $("#Pass").val();
@@ -34,6 +35,7 @@ $(document).ready(function(){
         sessionStorage.clear();
         alert("Usted ha salido de su cuenta exitosamente.");
     });
+    }
 
     const logueado = sessionStorage.getItem("usuarioLogueado")
     if (logueado == 1){

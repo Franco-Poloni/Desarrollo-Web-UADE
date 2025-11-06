@@ -2,22 +2,22 @@
 const estado = { items: [] };
 
 // Atajos
-const $ = (sel, root = document) => root.querySelector(sel);
-const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+const A = (sel, root = document) => root.querySelector(sel);
+const AA = (sel, root = document) => [...root.querySelectorAll(sel)];
 const formatoPrecio = (n) => n.toLocaleString("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
 
 // Elementos
-const productos = $("#productos");
-const contadorCarrito = $("#contadorCarrito");
-const panelCarrito = $("#panelCarrito");
-const fondo = $("#fondo");
-const itemsCarrito = $("#itemsCarrito");
-const totalCarrito = $("#totalCarrito");
-const mensaje = $("#mensaje");
+const productos = A("#productos");
+const contadorCarrito = A("#contadorCarrito");
+const panelCarrito = A("#panelCarrito");
+const fondo = A("#fondo");
+const itemsCarrito = A("#itemsCarrito");
+const totalCarrito = A("#totalCarrito");
+const mensaje = A("#mensaje");
 
 // Agregar al carrito
 productos.addEventListener("click", (e) => {
-  const boton = e.target.closest(".boton-agregar");
+  const boton = e.target.closest(".btn-agregar");
   if (!boton) return;
 
   const tarjeta = e.target.closest(".tarjeta-producto");
@@ -30,7 +30,7 @@ productos.addEventListener("click", (e) => {
   else estado.items.push({ id, nombre, precio, cantidad: 1 });
 
   mostrarCarrito();
-  mostrarMensaje(`🛒 Agregado: <b>${nombre}</b>`);
+  mostrarMensaje(`🛒 Agregado: <b>A{nombre}</b>`);
   animarContador();
 });
 
@@ -46,14 +46,14 @@ function mostrarCarrito() {
   }
 
   itemsCarrito.innerHTML = estado.items.map(item => `
-    <div class="fila-carrito" data-id="${item.id}">
+    <div class="fila-carrito" data-id="A{item.id}">
       <div class="info">
-        <strong>${item.nombre}</strong>
-        <span>${formatoPrecio(item.precio)} x ${item.cantidad}</span>
+        <strong>A{item.nombre}</strong>
+        <span>A{formatoPrecio(item.precio)} x A{item.cantidad}</span>
       </div>
       <div class="acciones">
         <button class="boton-cantidad" data-accion="menos">−</button>
-        <span>${item.cantidad}</span>
+        <span>A{item.cantidad}</span>
         <button class="boton-cantidad" data-accion="mas">+</button>
         <button class="boton-eliminar" data-accion="eliminar">×</button>
       </div>
@@ -84,13 +84,13 @@ itemsCarrito.addEventListener("click", (e) => {
   mostrarCarrito();
 });
 
-// Abrir / cerrar carrito
-//$("#cerrarCarrito").addEventListener("click", cerrarCarrito);
+/* Abrir / cerrar carrito
+//A("#cerrarCarrito").addEventListener("click", cerrarCarrito);
 fondo.addEventListener("click", cerrarCarrito);
 function cerrarCarrito() {
   panelCarrito.setAttribute("aria-hidden", "true");
   fondo.classList.remove("mostrar");
-}
+}*/
 
 // Mensaje flotante
 let tiempoMensaje;
@@ -109,31 +109,31 @@ function animarContador() {
 }
 
 // Filtrado de categorías
-const listaCategorias = $("#listaCategorias");
+const listaCategorias = A("#listaCategorias");
 listaCategorias.addEventListener("click", (e) => {
   const boton = e.target.closest(".boton-categoria");
   if (!boton) return;
-  $$(".boton-categoria", listaCategorias).forEach(b => b.classList.remove("activo"));
+  AA(".boton-categoria", listaCategorias).forEach(b => b.classList.remove("activo"));
   boton.classList.add("activo");
   const cat = boton.dataset.categoria;
 
-  $$(".tarjeta-producto", productos).forEach(card => {
-    const visible = cat === "todas" || card.dataset.categoria === cat;
+  AA(".tarjeta-producto", productos).forEach(card => {
+    const visible = cat === "todas" || card.dataset.categoria.split(" ").includes(cat);
     card.style.display = visible ? "" : "none";
   });
 });
 
 // Filtros
-const buscarTexto = $("#buscarTexto");
-const precioMax = $("#precioMax");
-const limpiarFiltros = $("#limpiarFiltros");
+const buscarTexto = A("#buscarTexto");
+const precioMax = A("#precioMax");
+const limpiarFiltros = A("#limpiarFiltros");
 
 function aplicarFiltros() {
   const texto = (buscarTexto.value || "").toLowerCase();
   const max = Number(precioMax.value) || Infinity;
-  const activa = $(".boton-categoria.activo", listaCategorias)?.dataset.categoria || "todas";
+  const activa = A(".boton-categoria.activo", listaCategorias)?.dataset.categoria || "todas";
 
-  $$(".tarjeta-producto", productos).forEach(card => {
+  AA(".tarjeta-producto", productos).forEach(card => {
     const nombre = card.dataset.nombre.toLowerCase();
     const precio = Number(card.dataset.precio);
     const coincide = nombre.includes(texto) && precio <= max;
@@ -145,17 +145,17 @@ function aplicarFiltros() {
 limpiarFiltros.addEventListener("click", () => {
   buscarTexto.value = "";
   precioMax.value = "";
-  $("#listaCategorias .boton-categoria[data-categoria='todas']").click();
+  A("#listaCategorias .boton-categoria[data-categoria='todas']").click();
   aplicarFiltros();
 });
 
 // Finalizar compra
-$("#botonComprar").addEventListener("click", () => {
+A("#botonComprar").addEventListener("click", () => {
   if (!estado.items.length) return mostrarMensaje("⚠️ Carrito vacío");
   mostrarMensaje("✅ Compra realizada (demo)");
   estado.items = [];
   mostrarCarrito();
-  cerrarCarrito();
+  //cerrarCarrito();
 });
 
 // Inicial

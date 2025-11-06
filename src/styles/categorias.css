@@ -122,6 +122,7 @@ main{
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-height: 320px;
   transition: 0.15s transform, 0.15s box-shadow;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
