@@ -25,16 +25,8 @@ $(document).ready(function(){
         });
     });
 
-        const nombre = sessionStorage.getItem("usuarioNombre");
-        $(".miCuenta").html(
-            `<p style="margin:15px;">¡Bienvenido, <strong>${nombre}</strong>!</p>
-            <a class="salir" href="../pages/index.html"><strong>SALIR</strong></a>`
-        );
-        /*SALIR*/
-        $(".salir").click(function() {
-        sessionStorage.clear();
-        alert("Usted ha salido de su cuenta exitosamente.");
-    });
+        
+        
     }
 
     const logueado = sessionStorage.getItem("usuarioLogueado")
@@ -53,6 +45,17 @@ $(document).ready(function(){
         e.preventDefault();
         $(".miCuenta").toggle();
 
+        const nombre = sessionStorage.getItem("usuarioNombre");
+        $(".miCuenta").html(
+            `<p style="margin:15px;">¡Bienvenido, <strong>${nombre}</strong>!</p>
+            <a class="salir" href="../pages/index.html"><strong>SALIR</strong></a>`
+        );
+
+        /*SALIR*/
+        $(".salir").click(function() {
+        sessionStorage.clear();
+        alert("Usted ha salido de su cuenta exitosamente.");
+        });
 
     });
 
@@ -60,18 +63,6 @@ $(document).ready(function(){
         if (!$(e.target).closest('.user-menu').length) {
             $(".miCuenta").hide();
         }
-        if (!$(e.target).closest('.carrito-menu').length) {
-            $(".carrito-cont").hide();
-        }
-    });
-
-
-    /*CARRITO*/
-    $(".carrito-desplegable").click(function(e) {
-        e.preventDefault();
-        $(".carrito-cont").toggle();
-
-        
     });
 
 
